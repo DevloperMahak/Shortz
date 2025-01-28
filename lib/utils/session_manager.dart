@@ -58,11 +58,11 @@ class SessionManager {
 
   User? getUser() {
     if (sharedPreferences != null) {
-<<<<<<< HEAD
+
       String? strUser = sharedPreferences!.getString(KeyRes.user)??"";
-=======
-      String? strUser = sharedPreferences!.getString(KeyRes.user);
->>>>>>> 766bb0b935f731df36722c55561fb1c1dda5b703
+
+      //String? strUser = sharedPreferences!.getString(KeyRes.user);
+
       if (strUser.isNotEmpty) {
         return User.fromJson(jsonDecode(strUser));
       } else {
@@ -80,11 +80,10 @@ class SessionManager {
 
   Setting? getSetting() {
     if (sharedPreferences != null) {
-<<<<<<< HEAD
       String? value = sharedPreferences?.getString(KeyRes.setting) ?? "";
-=======
-      String? value = sharedPreferences?.getString(KeyRes.setting);
->>>>>>> 766bb0b935f731df36722c55561fb1c1dda5b703
+
+      //String? value = sharedPreferences?.getString(KeyRes.setting);
+
       if (value.isNotEmpty) {
         return Setting.fromJson(jsonDecode(value));
       } else {
@@ -115,12 +114,12 @@ class SessionManager {
 
   List<String> getFavouriteMusic() {
     if (sharedPreferences != null) {
-<<<<<<< HEAD
+
       String? userString =
           sharedPreferences!.getString(KeyRes.favouriteMusic) ?? "";
-=======
-      String? userString = sharedPreferences!.getString(KeyRes.favouriteMusic);
->>>>>>> 766bb0b935f731df36722c55561fb1c1dda5b703
+
+      //String? userString = sharedPreferences!.getString(KeyRes.favouriteMusic);
+
       if (userString.isNotEmpty) {
         List<dynamic> dummy = json.decode(userString);
         return dummy.map((item) => item as String).toList();

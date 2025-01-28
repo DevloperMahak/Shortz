@@ -22,6 +22,8 @@ import 'package:google_sign_in/google_sign_in.dart';
 import 'package:provider/provider.dart';
 import 'package:sign_in_with_apple/sign_in_with_apple.dart';
 
+import '../profile/profile_screen.dart';
+
 class LoginSheet extends StatelessWidget {
   final SessionManager sessionManager = SessionManager();
   final FirebaseAuth _auth = FirebaseAuth.instance;
@@ -31,17 +33,12 @@ class LoginSheet extends StatelessWidget {
     initData();
     return Consumer(builder: (context, MyLoading myLoading, child) {
       return Container(
-<<<<<<< HEAD
+
         height: (MediaQuery.of(context).size.height -
             AppBar().preferredSize.height * 1.5),
         decoration: BoxDecoration(
             color:
                 myLoading.isDark ? ColorRes.colorPrimaryDark : ColorRes.white,
-=======
-        height: (MediaQuery.of(context).size.height - AppBar().preferredSize.height * 1.5),
-        decoration: BoxDecoration(
-            color: myLoading.isDark ? ColorRes.colorPrimaryDark : ColorRes.white,
->>>>>>> 766bb0b935f731df36722c55561fb1c1dda5b703
             borderRadius: BorderRadius.vertical(top: Radius.circular(25))),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -58,7 +55,7 @@ class LoginSheet extends StatelessWidget {
                   children: [
                     Padding(
                         padding: const EdgeInsets.symmetric(vertical: 10.0),
-<<<<<<< HEAD
+
                         child: Image.asset(
                             myLoading.isDark ? icLogo : icLogoLight,
                             height: 90)),
@@ -74,16 +71,7 @@ class LoginSheet extends StatelessWidget {
                           textAlign: TextAlign.center,
                           style: TextStyle(
                               fontSize: 14, fontFamily: FontRes.fNSfUiLight)),
-=======
-                        child: Image.asset(myLoading.isDark ? icLogo : icLogoLight, height: 90)),
-                    Text('${LKey.signUpFor.tr} $appName',
-                        style: TextStyle(fontSize: 22, fontFamily: FontRes.fNSfUiSemiBold)),
-                    SizedBox(height: 20),
-                    Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 30.0),
-                      child: Text(LKey.createAProfileFollowOtherCreatorsNBuildYourFanFollowingBy.tr,
-                          textAlign: TextAlign.center, style: TextStyle(fontSize: 14, fontFamily: FontRes.fNSfUiLight)),
->>>>>>> 766bb0b935f731df36722c55561fb1c1dda5b703
+
                     ),
                     SizedBox(height: 15),
                     Visibility(
@@ -94,17 +82,12 @@ class LoginSheet extends StatelessWidget {
                               (value) {
                                 if (value != null) {
                                   print('-------------------- :: ${value}');
-<<<<<<< HEAD
+
                                   _callApiForLogin(
                                       value, KeyRes.apple, context, myLoading);
                                 } else {
                                   CommonUI.showToast(
                                       msg: LKey.somethingWentWrong.tr);
-=======
-                                  _callApiForLogin(value, KeyRes.apple, context, myLoading);
-                                } else {
-                                  CommonUI.showToast(msg: LKey.somethingWentWrong.tr);
->>>>>>> 766bb0b935f731df36722c55561fb1c1dda5b703
                                 }
                               },
                             );
@@ -132,12 +115,10 @@ class LoginSheet extends StatelessWidget {
 
                             if (value != null) {
                               print('null');
-<<<<<<< HEAD
+
                               _callApiForLogin(
                                   value, KeyRes.google, context, myLoading);
-=======
-                              _callApiForLogin(value, KeyRes.google, context, myLoading);
->>>>>>> 766bb0b935f731df36722c55561fb1c1dda5b703
+
                             } else {
                               print('null');
                             }
@@ -161,17 +142,14 @@ class LoginSheet extends StatelessWidget {
   }
 
   Future<User?> _signInWithGoogle() async {
-<<<<<<< HEAD
+
     final GoogleSignInAccount? googleUser = await GoogleSignIn(
         clientId:
             '463711886346-3561g7e03arnm5cb1vchc07pjaip8drl.apps.googleusercontent.com',
         scopes: ['email', 'profile']).signIn();
     final GoogleSignInAuthentication? googleAuth =
         await googleUser?.authentication;
-=======
-    final GoogleSignInAccount? googleUser = await GoogleSignIn().signIn();
-    final GoogleSignInAuthentication? googleAuth = await googleUser?.authentication;
->>>>>>> 766bb0b935f731df36722c55561fb1c1dda5b703
+
     if (googleAuth?.accessToken == null || googleAuth?.idToken == null) {
       return null;
     }
@@ -193,14 +171,12 @@ class LoginSheet extends StatelessWidget {
     try {
       // Request Apple ID credentials
       final appleCredential = await SignInWithApple.getAppleIDCredential(
-<<<<<<< HEAD
+
         scopes: [
           AppleIDAuthorizationScopes.email,
           AppleIDAuthorizationScopes.fullName
         ],
-=======
-        scopes: [AppleIDAuthorizationScopes.email, AppleIDAuthorizationScopes.fullName],
->>>>>>> 766bb0b935f731df36722c55561fb1c1dda5b703
+
       );
 
       // Create an OAuth credential using the Apple ID token
@@ -209,7 +185,7 @@ class LoginSheet extends StatelessWidget {
       );
 
       // Extract the display name
-<<<<<<< HEAD
+
       String? displayName =
           '${appleCredential.givenName ?? ''} ${appleCredential.familyName ?? ''}'
               .trim();
@@ -217,14 +193,7 @@ class LoginSheet extends StatelessWidget {
 
       // Extract the email
       String? userEmail = appleCredential.email ?? '';
-=======
-      String? displayName = '${appleCredential.givenName ?? ''} ${appleCredential.familyName ?? ''}'.trim();
-      print('====== $displayName');
 
-      // Extract the email
-      String? userEmail = appleCredential.email;
->>>>>>> 766bb0b935f731df36722c55561fb1c1dda5b703
-      print('====== $userEmail');
 
       // Sign in to Firebase with the OAuth credential
       final authResult = await _auth.signInWithCredential(oauthCredential);
@@ -240,11 +209,9 @@ class LoginSheet extends StatelessWidget {
       // Update email if it's available and not already set
       if (userEmail.isNotEmpty && firebaseUser?.email == null) {
         print('Updating email... ${userEmail}');
-<<<<<<< HEAD
+
         await firebaseUser?.verifyBeforeUpdateEmail(userEmail);
-=======
-        await firebaseUser?.verifyBeforeUpdateEmail(userEmail!);
->>>>>>> 766bb0b935f731df36722c55561fb1c1dda5b703
+
       }
       Get.back();
       return firebaseUser;
@@ -258,29 +225,22 @@ class LoginSheet extends StatelessWidget {
     return null;
   }
 
-<<<<<<< HEAD
+
   void _callApiForLogin(
       User value, String loginType, BuildContext context, MyLoading myLoading) {
-=======
-  void _callApiForLogin(User value, String loginType, BuildContext context, MyLoading myLoading) {
->>>>>>> 766bb0b935f731df36722c55561fb1c1dda5b703
+
     HashMap<String, String?> params = new HashMap();
     print(sessionManager.getString(KeyRes.deviceToken));
     print(value.email != null ? value.email!.split('@')[0] : value.uid);
 
     params[UrlRes.deviceToken] = sessionManager.getString(KeyRes.deviceToken);
     params[UrlRes.userEmail] = value.email;
-<<<<<<< HEAD
-    params[UrlRes.fullName] = value.displayName ??
-        (value.email != null ? value.email!.split('@')[0] : value.uid);
-    params[UrlRes.loginType] = loginType;
-    params[UrlRes.userName] =
-        value.email != null ? value.email!.split('@')[0] : value.uid;
-=======
+
+
     params[UrlRes.fullName] = value.displayName ?? (value.email != null ? value.email!.split('@')[0] : value.uid);
     params[UrlRes.loginType] = loginType;
     params[UrlRes.userName] = value.email != null ? value.email!.split('@')[0] : value.uid;
->>>>>>> 766bb0b935f731df36722c55561fb1c1dda5b703
+
     params[UrlRes.identity] = value.email ?? value.uid;
     params[UrlRes.platform] = Platform.isAndroid ? "1" : "2";
     CommonUI.showLoader(context);

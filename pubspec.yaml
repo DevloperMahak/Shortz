@@ -9,20 +9,19 @@ version: 1.0.0+1
 environment:
   sdk: '>=2.15.0 <3.19.6'
 
-<<<<<<< HEAD
-#dependency_overrides:
-#  video_player_android: 2.7.1
-=======
-dependency_overrides:
-  video_player_android: 2.7.1
->>>>>>> 766bb0b935f731df36722c55561fb1c1dda5b703
+
+ 
 
 dependencies:
   flutter:
     sdk: flutter
-
+  camera: ^0.10.0+4
+  video_player: ^2.5.0
   bubbly_camera:
     path: "CameraPlugin/camera"
+
+
+
 
   cupertino_icons: ^1.0.8
 
@@ -58,10 +57,7 @@ dependencies:
   share_plus: ^10.1.0
   audioplayers: ^6.1.0
   audioplayers_darwin: ^6.0.0
-<<<<<<< HEAD
-=======
-  video_player: ^2.8.7
->>>>>>> 766bb0b935f731df36722c55561fb1c1dda5b703
+ 
 
   #----------------- UI -----------------#
   screenshot: ^3.0.0
@@ -97,10 +93,7 @@ dependencies:
   stacked: ^3.4.3
   provider: ^6.1.2
   get: ^4.6.6
-<<<<<<< HEAD
-  video_player: ^2.9.2
-=======
->>>>>>> 766bb0b935f731df36722c55561fb1c1dda5b703
+  
 
 dev_dependencies:
   flutter_test:
@@ -109,7 +102,13 @@ dev_dependencies:
   build_runner: ^2.4.13
 
 flutter:
-
+  plugin:
+    platforms:
+      android:
+        package: com.retrytech.bubbly_camera
+        pluginClass: BubblyCameraPlugin
+      ios:
+        pluginClass: FlutterDailogPlugin
   uses-material-design: true
 
   # To add assets to your application, add an assets section, like this:
