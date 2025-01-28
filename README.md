@@ -1,5 +1,6 @@
 # Shortzz
 
+<<<<<<< HEAD
 # Date: 23 January 2025
 
 ## Progress
@@ -76,6 +77,8 @@ video_thumbnail/
   ```
 
 
+=======
+>>>>>>> 766bb0b935f731df36722c55561fb1c1dda5b703
 # Date: 23 October 2024
 
 ## Summary
@@ -87,7 +90,11 @@ video_thumbnail/
 #### Updated Files
 [README.md](..%2Fbubbly%202%2FREADME.md)
 - [settings.gradle](android/settings.gradle)
+<<<<<<< HEAD
 - [pubspec.yaml](../shortz_/pubspec.yaml)
+=======
+- [pubspec.yaml](pubspec.yaml)
+>>>>>>> 766bb0b935f731df36722c55561fb1c1dda5b703
 - Podfile
 - api_service.dart
 - camera_screen.dart
@@ -154,7 +161,11 @@ Remove `image_gallery_saver` Add `saver_gallery`
 
 - [AndroidManifest.xml](android/app/src/main/AndroidManifest.xml)
 - [Info.plist](ios/Runner/Info.plist)
+<<<<<<< HEAD
 - [pubspec.yaml](../shortz_/pubspec.yaml)
+=======
+- [pubspec.yaml](pubspec.yaml)
+>>>>>>> 766bb0b935f731df36722c55561fb1c1dda5b703
 - [settings.gradle](android/settings.gradle)
 - main.dart
 - app_res.dart
@@ -206,7 +217,11 @@ None
 - `const_res.dart` file add video limit maxUploadMB and maxUploadSecond
 
 #### Updated Files
+<<<<<<< HEAD
 - [pubspec.yaml](../shortz_/pubspec.yaml)
+=======
+- [pubspec.yaml](pubspec.yaml)
+>>>>>>> 766bb0b935f731df36722c55561fb1c1dda5b703
 - [build.gradle](android/app/build.gradle)
 - api_service.dart
 - camera_screen.dart
@@ -234,7 +249,11 @@ None
 - [AppDelegate.swift](ios/Runner/AppDelegate.swift)
 - [Info.plist](ios/Runner/Info.plist)
 - [Podfile](ios/Podfile)
+<<<<<<< HEAD
 - [pubspec.yaml](../shortz_/pubspec.yaml)
+=======
+- [pubspec.yaml](pubspec.yaml)
+>>>>>>> 766bb0b935f731df36722c55561fb1c1dda5b703
 - [SwiftFlutterDailogPlugin.swift](CameraPlugin/camera/ios/Classes/SwiftFlutterDailogPlugin.swift)
 - assert_image.dart
 - camera_screen.dart

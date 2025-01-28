@@ -224,9 +224,15 @@ class _MyQrScanCodeScreenState extends State<MyQrScanCodeScreen> {
     ui.Image image = await boundary.toImage(pixelRatio: 10);
     ByteData? byteData =
         await (image.toByteData(format: ui.ImageByteFormat.png));
+<<<<<<< HEAD
     Uint8List? pngBytes = byteData?.buffer.asUint8List();
     print(pngBytes);
     convertImageToFile(pngBytes!, context).then((value) {
+=======
+    Uint8List pngBytes = byteData.buffer.asUint8List();
+    print(pngBytes);
+    convertImageToFile(pngBytes, context).then((value) {
+>>>>>>> 766bb0b935f731df36722c55561fb1c1dda5b703
       Navigator.pop(context);
     });
   }

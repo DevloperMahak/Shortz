@@ -43,6 +43,7 @@ app.*.map.json
 /android/app/debug
 /android/app/profile
 /android/app/release
+<<<<<<< HEAD
 android/build/
 # Ignore Gradle project-specific cache directory
 .gradle
@@ -52,3 +53,5 @@ build
 *.aab
 *.apk
 gradle/
+=======
+>>>>>>> 766bb0b935f731df36722c55561fb1c1dda5b703

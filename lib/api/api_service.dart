@@ -861,9 +861,12 @@ class ApiService {
         UrlRes.uniqueKey: ConstRes.apiKey,
       },
     );
+<<<<<<< HEAD
     print('THis is the response');
     print(response.body);
     print('Done');
+=======
+>>>>>>> 766bb0b935f731df36722c55561fb1c1dda5b703
     SessionManager sessionManager = SessionManager();
     await sessionManager.initPref();
     sessionManager.saveSetting(response.body);

@@ -6,7 +6,11 @@ bool isLightMode = true;
 
 /// Theme light mode
 
+<<<<<<< HEAD
 ThemeData lightTheme() {
+=======
+ThemeData lightTheme(BuildContext context) {
+>>>>>>> 766bb0b935f731df36722c55561fb1c1dda5b703
   return ThemeData(
     primaryColorDark: ColorRes.white,
     scaffoldBackgroundColor: ColorRes.white,
@@ -36,7 +40,11 @@ ThemeData lightTheme() {
 }
 
 /// Theme dark mode
+<<<<<<< HEAD
 ThemeData darkTheme() {
+=======
+ThemeData darkTheme(BuildContext context) {
+>>>>>>> 766bb0b935f731df36722c55561fb1c1dda5b703
   return ThemeData(
     primaryColorDark: ColorRes.colorPrimaryDark,
     scaffoldBackgroundColor: ColorRes.colorPrimaryDark,

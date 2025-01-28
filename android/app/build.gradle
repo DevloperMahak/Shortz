@@ -36,8 +36,13 @@ configurations.configureEach {
 }
 
 android {
+<<<<<<< HEAD
     compileSdk 35
     namespace 'com.retrytech.bubbly'
+=======
+    compileSdk 34
+    namespace 'com.myapps.shortz'
+>>>>>>> 766bb0b935f731df36722c55561fb1c1dda5b703
     compileOptions {
         coreLibraryDesugaringEnabled true
 
@@ -55,9 +60,15 @@ android {
         main.java.srcDirs += 'src/main/kotlin'
     }
     defaultConfig {
+<<<<<<< HEAD
         applicationId "com.retrytech.bubbly"
         minSdkVersion 24
         targetSdkVersion 35
+=======
+        applicationId "com.myapps.shortz"
+        minSdkVersion 24
+        targetSdkVersion 34
+>>>>>>> 766bb0b935f731df36722c55561fb1c1dda5b703
         multiDexEnabled true
         versionCode 6
         versionName '1.0.6'
@@ -88,6 +99,9 @@ dependencies {
     implementation platform('com.google.firebase:firebase-bom:33.0.0')
     implementation 'com.google.firebase:firebase-analytics'
     coreLibraryDesugaring 'com.android.tools:desugar_jdk_libs:2.0.4'
+<<<<<<< HEAD
     implementation 'com.google.android.gms:play-services-ads:21.5.0'
+=======
+>>>>>>> 766bb0b935f731df36722c55561fb1c1dda5b703
 
 }

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 //
 //ext {
 //    flutterFFmpegPackage = "full-gpl"
@@ -78,11 +79,48 @@
 //        attributes("Implementation-Title": "Gradle", "Implementation-Version": version)
 //    }
 //}
+=======
+>>>>>>> 766bb0b935f731df36722c55561fb1c1dda5b703
 
 ext {
     flutterFFmpegPackage = "full-gpl"
 }
+<<<<<<< HEAD
 
+=======
+allprojects {
+    repositories {
+        google()
+        mavenCentral()
+    }
+}
+
+rootProject.buildDir = '../build'
+
+subprojects {
+    afterEvaluate { project ->
+        if (project.hasProperty('android')) {
+            project.android {
+                if (namespace == null) {
+                    namespace project.group
+                }
+            }
+        }
+    }
+}
+
+subprojects {
+    project.buildDir = "${rootProject.buildDir}/${project.name}"
+    project.evaluationDependsOn(':app')
+}
+
+tasks.register("clean", Delete) {
+    delete rootProject.buildDir
+}
+ext {
+    flutterFFmpegPackage = "full-gpl"
+}
+>>>>>>> 766bb0b935f731df36722c55561fb1c1dda5b703
 allprojects {
     repositories {
         google()
@@ -94,6 +132,7 @@ allprojects {
 rootProject.buildDir = '../build'
 
 subprojects {
+<<<<<<< HEAD
     project.buildDir = "${rootProject.buildDir}/${project.name}"
     project.evaluationDependsOn(':app')
 
@@ -105,11 +144,31 @@ subprojects {
             compileOptions {
                 sourceCompatibility JavaVersion.VERSION_17
                 targetCompatibility JavaVersion.VERSION_17
+=======
+    afterEvaluate { project ->
+        if (project.hasProperty('android')) {
+            project.android {
+                if (namespace == null) {
+                    namespace project.group
+                }
+                compileOptions {
+                    sourceCompatibility JavaVersion.VERSION_1_8
+                    targetCompatibility JavaVersion.VERSION_1_8
+                }
+>>>>>>> 766bb0b935f731df36722c55561fb1c1dda5b703
             }
         }
     }
 }
 
+<<<<<<< HEAD
+=======
+subprojects {
+    project.buildDir = "${rootProject.buildDir}/${project.name}"
+    project.evaluationDependsOn(':app')
+}
+
+>>>>>>> 766bb0b935f731df36722c55561fb1c1dda5b703
 tasks.register("clean", Delete) {
     delete rootProject.buildDir
 }
@@ -120,9 +179,15 @@ tasks.withType(JavaCompile) {
 
 tasks.withType(org.gradle.jvm.tasks.Jar) {
     manifest {
+<<<<<<< HEAD
         attributes(
                 "Implementation-Title": "Gradle",
                 "Implementation-Version": version
         )
     }
 }
+=======
+        attributes("Implementation-Title": "Gradle", "Implementation-Version": version)
+    }
+}
+>>>>>>> 766bb0b935f731df36722c55561fb1c1dda5b703

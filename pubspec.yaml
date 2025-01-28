@@ -9,8 +9,13 @@ version: 1.0.0+1
 environment:
   sdk: '>=2.15.0 <3.19.6'
 
+<<<<<<< HEAD
 #dependency_overrides:
 #  video_player_android: 2.7.1
+=======
+dependency_overrides:
+  video_player_android: 2.7.1
+>>>>>>> 766bb0b935f731df36722c55561fb1c1dda5b703
 
 dependencies:
   flutter:
@@ -53,6 +58,10 @@ dependencies:
   share_plus: ^10.1.0
   audioplayers: ^6.1.0
   audioplayers_darwin: ^6.0.0
+<<<<<<< HEAD
+=======
+  video_player: ^2.8.7
+>>>>>>> 766bb0b935f731df36722c55561fb1c1dda5b703
 
   #----------------- UI -----------------#
   screenshot: ^3.0.0
@@ -88,7 +97,10 @@ dependencies:
   stacked: ^3.4.3
   provider: ^6.1.2
   get: ^4.6.6
+<<<<<<< HEAD
   video_player: ^2.9.2
+=======
+>>>>>>> 766bb0b935f731df36722c55561fb1c1dda5b703
 
 dev_dependencies:
   flutter_test:

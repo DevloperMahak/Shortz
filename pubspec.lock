@@ -1642,6 +1642,7 @@ packages:
     source: hosted
     version: "2.9.2"
   video_player_android:
+<<<<<<< HEAD
     dependency: transitive
     description:
       name: video_player_android
@@ -1649,6 +1650,15 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.7.17"
+=======
+    dependency: "direct overridden"
+    description:
+      name: video_player_android
+      sha256: e343701aa890b74a863fa460f5c0e628127ed06a975d7d9af6b697133fb25bdf
+      url: "https://pub.dev"
+    source: hosted
+    version: "2.7.1"
+>>>>>>> 766bb0b935f731df36722c55561fb1c1dda5b703
   video_player_avfoundation:
     dependency: transitive
     description:

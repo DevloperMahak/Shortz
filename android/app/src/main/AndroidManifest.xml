@@ -30,7 +30,11 @@
 
 
     <application
+<<<<<<< HEAD
         android:name="com.retrytech.bubbly.MyApplication"
+=======
+        android:name=".MyApplication"
+>>>>>>> 766bb0b935f731df36722c55561fb1c1dda5b703
         android:icon="@mipmap/ic_launcher"
         android:label="Shortz"
         android:requestLegacyExternalStorage="true"
@@ -41,6 +45,13 @@
             android:name="org.apache.http.legacy"
             android:required="false" />
 
+<<<<<<< HEAD
+=======
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false" />
+
+>>>>>>> 766bb0b935f731df36722c55561fb1c1dda5b703
         <activity
             android:name=".MainActivity"
             android:configChanges="orientation|keyboardHidden|keyboard|screenSize|smallestScreenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode"
@@ -97,7 +108,11 @@
             android:value="BRANCH APP KEY" />
         <meta-data
             android:name="com.google.android.gms.ads.APPLICATION_ID"
+<<<<<<< HEAD
             android:value="ca-app-pub-4865032430722981~5164883147" />
+=======
+            android:value="ca-app-pub-3940256099942544~3347511713" />
+>>>>>>> 766bb0b935f731df36722c55561fb1c1dda5b703
         <meta-data
             android:name="flutterEmbedding"
             android:value="2" />
